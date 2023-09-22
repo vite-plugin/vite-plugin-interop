@@ -1,0 +1,9 @@
+{
+  "name": "vite-plugin-interop",
+  "version": "0.0.1",
+  "description": "Interop between ESModule and CommonJS",
+  "main": "dist/index.js",
+  "repository": "https://github.com/vite-plugin/vite-plugin-interop.git",
+  "author": "野鸡没名 <asd308487730@gmail.com>",
+  "license": "MIT"
+}
