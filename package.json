@@ -2,8 +2,41 @@
   "name": "vite-plugin-interop",
   "version": "0.0.1",
   "description": "Interop between ESModule and CommonJS",
-  "main": "dist/index.js",
-  "repository": "https://github.com/vite-plugin/vite-plugin-interop.git",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "types": "tsc",
+    "test": "",
+    "build": "vite build",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "homepage": "https://github.com/vite-plugin/vite-plugin-interop.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vite-plugin/vite-plugin-interop.git"
+  },
   "author": "野鸡没名 <asd308487730@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "vite": "^4.4.9"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "interop",
+    "ESModule",
+    "CommonJS"
+  ],
+  "files": [
+    "dist"
+  ]
 }
